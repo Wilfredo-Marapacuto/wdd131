@@ -1,5 +1,5 @@
 const input = document.querySelector("#favchap");
-const button = document.querySelector("#addChapter");
+const button = document.querySelector("button");
 const list = document.querySelector("#list");
 
 button.addEventListener("click", () => {
@@ -12,8 +12,7 @@ button.addEventListener("click", () => {
   const deleteButton = document.createElement("button");
 
   li.textContent = input.value;
-
-  deleteButton.textContent = "❌";
+  deleteButton.textContent = "X";
   deleteButton.setAttribute("aria-label", "Delete chapter");
 
   deleteButton.addEventListener("click", () => {
