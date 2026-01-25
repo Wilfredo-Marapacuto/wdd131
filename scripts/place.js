@@ -18,7 +18,7 @@ function calculateWindChill(temp, speed) {
 }
 
 if (temperature <= 50 && windSpeed > 3) {
-  chillSpan.textContent = ${calculateWindChill(temperature, windSpeed)} °F;
+  chillSpan.textContent = calculateWindChill(temperature, windSpeed) + " °F";
 } else {
   chillSpan.textContent = "N/A";
 }
