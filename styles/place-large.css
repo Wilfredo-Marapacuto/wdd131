@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+
+  /* Hide SVG in desktop */
+  .weather-icon {
+    display: none;
+  }
+
+  /* Add emoticon with pseudo-element */
+  .weather h2::after {
+    content: " ☀️";
+  }
+
+}

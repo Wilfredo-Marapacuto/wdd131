@@ -1,0 +1,71 @@
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* DATA & WEATHER BASE */
+.data,
+.weather {
+  background-color: rgba(255, 255, 255, 0.88);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 260px;
+}
+
+.data h2,
+.weather h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* MOBILE FIRST */
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.weather img {
+  width: 40px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+  main {
+    padding: 0;
+  }
+
+  .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .data {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+
+  .weather {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+  }
+
+  /* SVG ONLY MOBILE */
+  .weather img {
+    display: none;
+  }
+
+  /* EMOTICON ONLY DESKTOP */
+  .weather h2::after {
+    content: " ☀️";
+  }
+}
