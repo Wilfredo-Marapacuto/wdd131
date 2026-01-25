@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #0b3c6f;
+  --light-bg: #f4f4f4;
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --text-color: #222;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,13 +13,13 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
+  background-color: var(--light-bg);
+  color: var(--text-color);
 }
 
 /* HEADER */
 header {
-  background-color: #0b3c6f;
+  background-color: var(--primary-color);
   color: #ffffff;
   text-align: center;
   padding: 1.2rem;
@@ -24,7 +31,7 @@ header h1 {
 
 /* FOOTER */
 footer {
-  background-color: #0b3c6f;
+  background-color: var(--primary-color);
   color: #ffffff;
   text-align: center;
   padding: 1rem;
