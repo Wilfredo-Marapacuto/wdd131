@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #4b1c6f;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+#hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #6a2fa0;
+}
+
+nav.open {
+  display: flex;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.temple-card {
+  background: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.temple-card h3 {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.temple-card p {
+  margin: 0.25rem 0;
+}
+
+.temple-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0.75rem;
+  border-radius: 4px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #4b1c6f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
