@@ -1,54 +1,71 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product review form to submit ratings, installation date, and feedback.">
-    <meta name="author" content="Wilfredo Marapacuto">
-    <title>Product Review Form</title>
-    <link rel="stylesheet" href="styles/form.css">
-    <script defer src="scripts/form.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product review form to submit ratings, installation date, and feedback.">
+  <meta name="author" content="Wilfredo Marapacuto">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css">
 </head>
+
 <body>
 
-<h1>Product Review</h1>
+<header>
+  <h1>Product Review</h1>
+</header>
 
 <form method="get" action="review.html">
 
-    <label for="product">Product Name *</label>
-    <select id="product" name="product" required>
-        <option value="" disabled selected>Select a Product...</option>
-    </select>
+  <label for="product">Choose a product:</label>
+  <select id="product" name="product" required>
+    <option value="">Select a product</option>
+    <option value="laptop">Laptop</option>
+    <option value="phone">Phone</option>
+    <option value="tablet">Tablet</option>
+  </select>
 
-    <label>Overall Rating *</label>
-    <div class="rating">
-        <input type="radio" id="r1" name="rating" value="1" required><label for="r1">★</label>
-        <input type="radio" id="r2" name="rating" value="2"><label for="r2">★</label>
-        <input type="radio" id="r3" name="rating" value="3"><label for="r3">★</label>
-        <input type="radio" id="r4" name="rating" value="4"><label for="r4">★</label>
-        <input type="radio" id="r5" name="rating" value="5"><label for="r5">★</label>
-    </div>
+  <p>Rating:</p>
+  <label><input type="radio" name="rating" value="1" required> 1 Star</label>
+  <label><input type="radio" name="rating" value="2" required> 2 Stars</label>
+  <label><input type="radio" name="rating" value="3" required> 3 Stars</label>
+  <label><input type="radio" name="rating" value="4" required> 4 Stars</label>
+  <label><input type="radio" name="rating" value="5" required> 5 Stars</label>
 
-    <label for="date">Date of Installation *</label>
-    <input type="date" id="date" name="date" required>
+  <label for="date">Installation Date:</label>
+  <input type="date" id="date" name="date" required>
 
-    <fieldset>
-        <legend>Useful Features</legend>
-        <label><input type="checkbox" name="features" value="durability"> Durability</label>
-        <label><input type="checkbox" name="features" value="ease"> Ease of Use</label>
-        <label><input type="checkbox" name="features" value="performance"> Performance</label>
-        <label><input type="checkbox" name="features" value="design"> Design</label>
-    </fieldset>
+  <p>Features you liked:</p>
+  <label for="feature1">
+    <input type="checkbox" id="feature1" name="features" value="design">
+    Design
+  </label>
 
-    <label for="review">Written Review</label>
-    <textarea id="review" name="review"></textarea>
+  <label for="feature2">
+    <input type="checkbox" id="feature2" name="features" value="performance">
+    Performance
+  </label>
 
-    <label for="username">Your Name</label>
-    <input type="text" id="username" name="username">
+  <label for="feature3">
+    <input type="checkbox" id="feature3" name="features" value="battery">
+    Battery Life
+  </label>
 
-    <input type="submit" value="Post Review">
+  <label for="feature4">
+    <input type="checkbox" id="feature4" name="features" value="camera">
+    Camera
+  </label>
+
+  <label for="comments">Additional Comments:</label>
+  <textarea id="comments" name="comments" rows="4" cols="40" required></textarea>
+
+  <button type="submit">Submit Review</button>
 
 </form>
+
+<footer>
+  <p>&copy; 2026 Wilfredo Marapacuto</p>
+</footer>
 
 </body>
 </html>
