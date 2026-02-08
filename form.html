@@ -1,70 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Product review form to submit ratings, installation date, and feedback.">
-  <meta name="author" content="Wilfredo Marapacuto">
-  <title>Product Review Form</title>
-  <link rel="stylesheet" href="styles/form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form to submit ratings, installation date, and feedback.">
+    <meta name="author" content="Wilfredo Marapacuto">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/form.js"></script>
 </head>
-
 <body>
 
 <header>
-  <h1>Product Review</h1>
+    <h1>Product Review</h1>
 </header>
 
+<main>
 <form method="get" action="review.html">
 
-  <label for="product">Choose a product:</label>
-  <select id="product" name="product" required>
-    <option value="">Select a product</option>
-    <option value="laptop">Laptop</option>
-    <option value="phone">Phone</option>
-    <option value="tablet">Tablet</option>
-  </select>
+    <label for="product">Product Name</label>
+    <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+    </select>
 
-  <p>Rating:</p>
-  <label><input type="radio" name="rating" value="1" required> 1 Star</label>
-  <label><input type="radio" name="rating" value="2" required> 2 Stars</label>
-  <label><input type="radio" name="rating" value="3" required> 3 Stars</label>
-  <label><input type="radio" name="rating" value="4" required> 4 Stars</label>
-  <label><input type="radio" name="rating" value="5" required> 5 Stars</label>
+    <fieldset>
+        <legend>Overall Rating</legend>
 
-  <label for="date">Installation Date:</label>
-  <input type="date" id="date" name="date" required>
+        <label for="star1">★</label>
+        <input type="radio" id="star1" name="rating" value="1" required>
 
-  <p>Features you liked:</p>
-  <label for="feature1">
-    <input type="checkbox" id="feature1" name="features" value="design">
-    Design
-  </label>
+        <label for="star2">★</label>
+        <input type="radio" id="star2" name="rating" value="2" required>
 
-  <label for="feature2">
-    <input type="checkbox" id="feature2" name="features" value="performance">
-    Performance
-  </label>
+        <label for="star3">★</label>
+        <input type="radio" id="star3" name="rating" value="3" required>
 
-  <label for="feature3">
-    <input type="checkbox" id="feature3" name="features" value="battery">
-    Battery Life
-  </label>
+        <label for="star4">★</label>
+        <input type="radio" id="star4" name="rating" value="4" required>
 
-  <label for="feature4">
-    <input type="checkbox" id="feature4" name="features" value="camera">
-    Camera
-  </label>
+        <label for="star5">★</label>
+        <input type="radio" id="star5" name="rating" value="5" required>
+    </fieldset>
 
-  <label for="comments">Additional Comments:</label>
-  <textarea id="comments" name="comments" rows="4" cols="40" required></textarea>
+    <label for="installDate">Date of Installation</label>
+    <input type="date" id="installDate" name="installDate" required>
 
-  <button type="submit">Submit Review</button>
+    <fieldset>
+        <legend>Useful Features</legend>
+
+        <input type="checkbox" id="durability" name="features" value="Durability">
+        <label for="durability">Durability</label>
+
+        <input type="checkbox" id="ease" name="features" value="Ease of Use">
+        <label for="ease">Ease of Use</label>
+
+        <input type="checkbox" id="performance" name="features" value="Performance">
+        <label for="performance">Performance</label>
+
+        <input type="checkbox" id="design" name="features" value="Design">
+        <label for="design">Design</label>
+    </fieldset>
+
+    <label for="review">Written Review (Optional)</label>
+    <textarea id="review" name="review"></textarea>
+
+    <label for="username">Your Name (Optional)</label>
+    <input type="text" id="username" name="username">
+
+    <input type="submit" value="Post Review">
 
 </form>
+</main>
 
 <footer>
-  <p>&copy; 2026 Wilfredo Marapacuto</p>
+    <p>&copy; 2026 Wilfredo Marapacuto</p>
 </footer>
 
 </body>
