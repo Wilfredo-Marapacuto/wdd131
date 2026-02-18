@@ -1,6 +1,4 @@
-// project/scripts/index.js
 
-// ---------- helpers ----------
 function qs(sel, scope = document) {
   return scope.querySelector(sel);
 }
@@ -9,7 +7,7 @@ function setText(sel, text) {
   if (el) el.textContent = text;
 }
 
-// ---------- nav (safe/no-op if not present) ----------
+
 function setupNav() {
   const btn = qs("#menu");
   const nav = qs("nav");
@@ -21,7 +19,7 @@ function setupNav() {
   });
 }
 
-// ---------- footer ----------
+
 function setupFooter() {
   setText("#year", new Date().getFullYear());
 
@@ -33,7 +31,7 @@ function setupFooter() {
   greeting.textContent = `${text} Welcome to the student project site.`;
 }
 
-// ---------- index page feature ----------
+
 function setupMessageBuilder() {
   const clientName = qs("#clientName");
   const serviceType = qs("#serviceType");
@@ -42,7 +40,6 @@ function setupMessageBuilder() {
 
   if (!clientName || !serviceType || !btn || !out) return;
 
-  // restore last message
   const saved = localStorage.getItem("wm_lastMessage");
   if (saved) out.textContent = saved;
 
@@ -60,7 +57,7 @@ function setupMessageBuilder() {
   });
 }
 
-// ---------- run ----------
+
 setupNav();
 setupFooter();
 setupMessageBuilder();

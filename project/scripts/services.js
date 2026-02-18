@@ -57,11 +57,10 @@ function setupFilters() {
 
     let list = services;
 
-    // array methods + conditional branching
     if (cat !== "all") list = list.filter(s => s.cat === cat);
     if (onlyPop) list = list.filter(s => s.popular);
 
-    // sort (array method)
+    
     list = list.slice().sort((a,b) => a.title.localeCompare(b.title));
 
     render(list);
@@ -81,7 +80,7 @@ function setupSaveButtons() {
     const item = services.find(s => s.id === id);
     if (!item) return;
 
-    // objects + localStorage
+
     const saved = JSON.parse(localStorage.getItem("wm_saved_services") || "[]");
     const exists = saved.some(x => x.id === item.id);
 

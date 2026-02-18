@@ -1,6 +1,3 @@
-// project/scripts/contact.js
-
-// ---------- helpers ----------
 function qs(sel, scope = document) {
   return scope.querySelector(sel);
 }
@@ -12,7 +9,7 @@ function setText(sel, text) {
   if (el) el.textContent = text;
 }
 
-// ---------- nav (safe/no-op if not present) ----------
+
 function setupNav() {
   const btn = qs("#menu");
   const nav = qs("nav");
@@ -24,12 +21,12 @@ function setupNav() {
   });
 }
 
-// ---------- footer ----------
+
 function setupFooter() {
   setText("#year", new Date().getFullYear());
 }
 
-// ---------- draft save/load ----------
+
 const DRAFT_KEY = "wm_contact_draft";
 
 function getDraftData() {
@@ -69,7 +66,7 @@ function loadDraft(form) {
   });
 }
 
-// ---------- validation ----------
+
 function validateForm() {
   const fullName = qs("#fullName")?.value.trim() || "";
   const email = qs("#email")?.value.trim() || "";
@@ -84,17 +81,17 @@ function validateForm() {
   return "";
 }
 
-// ---------- contact form ----------
+
 function setupForm() {
   const form = qs("form");
   const status = qs("#formStatus") || qs("#status") || qs("#messageOut");
 
   if (!form) return;
 
-  // load saved draft on start
+  
   loadDraft(form);
 
-  // auto-save draft when typing (only if #saveDraft is checked, if it exists)
+  
   ["input", "change"].forEach((evt) => {
     form.addEventListener(evt, () => saveDraftIfEnabled(form));
   });
@@ -114,13 +111,13 @@ function setupForm() {
       status.textContent = `Thank you, ${name}. Your ${topic} request was recorded for this student project site.`;
     }
 
-    // clear draft after successful submit
+    
     localStorage.removeItem(DRAFT_KEY);
     form.reset();
   });
 }
 
-// ---------- run ----------
+
 setupNav();
 setupFooter();
 setupForm();
