@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Services offered by WM Servicios Hispanos.">
+  <title>WM Servicios Hispanos | Services</title>
+
+  <link rel="icon" href="images/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/services.css">
+  <link rel="stylesheet" href="styles/services-large.css">
+  <script src="scripts/services.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand__logo" src="images/logo.webp" alt="WM Servicios Hispanos logo" width="56" height="56">
+      <div class="brand__text">
+        <p class="brand__name">WM Servicios Hispanos</p>
+        <p class="brand__tag">Immigration • Taxes • Insurance</p>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <ul id="navLinks" class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="is-active" href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <h1>Services</h1>
+      <p>Select a category to filter services. Your selection is saved automatically.</p>
+    </section>
+
+    <section class="filters">
+      <label for="serviceFilter">Category</label>
+      <select id="serviceFilter" name="serviceFilter">
+        <option value="all">All</option>
+        <option value="immigration">Immigration</option>
+        <option value="taxes">Taxes</option>
+        <option value="insurance">Insurance</option>
+      </select>
+
+      <label class="check">
+        <input type="checkbox" id="showOnlyPopular">
+        Show only popular
+      </label>
+    </section>
+
+    <section class="grid" id="servicesGrid" aria-label="Services list">
+      <!-- JS injects cards -->
+    </section>
+
+    <section class="section">
+      <h2>Featured Images</h2>
+      <div class="thumbs">
+        <figure>
+          <img src="images/immigration.jpg" alt="Immigration concept image" loading="lazy" width="800" height="500">
+          <figcaption>Immigration</figcaption>
+        </figure>
+        <figure>
+          <img src="images/taxes.jpg" alt="Taxes concept image" loading="lazy" width="800" height="500">
+          <figcaption>Taxes</figcaption>
+        </figure>
+        <figure>
+          <img src="images/insurance.jpg" alt="Insurance concept image" loading="lazy" width="800" height="500">
+          <figcaption>Insurance</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WM Servicios Hispanos</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>

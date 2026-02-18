@@ -1,0 +1,9 @@
+@media (min-width: 900px){
+  .hero{
+    display:grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items:stretch;
+  }
+  .hero__content{ padding:1.5rem; }
+  .cards{ grid-template-columns: repeat(3, 1fr); }
+}

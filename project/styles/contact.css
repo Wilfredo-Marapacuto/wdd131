@@ -1,0 +1,45 @@
+.page-head p{ color:var(--muted); }
+
+.contact-wrap{
+  display:grid;
+  gap:1rem;
+}
+
+form{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1rem;
+  background: rgba(18,18,24,.6);
+}
+
+fieldset{
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;
+  margin:0 0 1rem;
+  padding:1rem;
+}
+legend{ padding:0 .5rem; color:var(--muted); }
+
+label{ display:block; margin:.75rem 0 .35rem; }
+.hint{ margin:.75rem 0 .35rem; color:var(--muted); }
+
+.radio-row{ display:flex; gap:1rem; flex-wrap:wrap; }
+.check{ display:flex; align-items:center; gap:.5rem; color:var(--muted); margin-top:.75rem; }
+
+.form-status{
+  margin-top:1rem;
+  padding:.75rem 1rem;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background: rgba(0,0,0,.22);
+  color:var(--muted);
+}
+
+.contact-info{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1rem;
+  background: rgba(18,18,24,.6);
+}
+.contact-info ul{ padding-left:1.1rem; color:var(--muted); }
+.note{ color:var(--muted); }

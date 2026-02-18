@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Contact WM Servicios Hispanos.">
+  <title>WM Servicios Hispanos | Contact</title>
+
+  <link rel="icon" href="images/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/contact-large.css">
+  <script src="scripts/contact.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand__logo" src="images/logo.webp" alt="WM Servicios Hispanos logo" width="56" height="56">
+      <div class="brand__text">
+        <p class="brand__name">WM Servicios Hispanos</p>
+        <p class="brand__tag">Immigration • Taxes • Insurance</p>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <ul id="navLinks" class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="is-active" href="contact.html">Contact</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <h1>Contact</h1>
+      <p>Send a message. Fields marked with * are required.</p>
+    </section>
+
+    <section class="contact-wrap">
+      <form id="contactForm" novalidate>
+        <fieldset>
+          <legend>Your information</legend>
+
+          <label for="fullName">Full name *</label>
+          <input id="fullName" name="fullName" type="text" required minlength="2" maxlength="60" autocomplete="name">
+
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="e.g., 8015551234" maxlength="20">
+        </fieldset>
+
+        <fieldset>
+          <legend>Request</legend>
+
+          <label for="topic">Service type *</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose one...</option>
+            <option value="immigration">Immigration</option>
+            <option value="taxes">Taxes</option>
+            <option value="insurance">Insurance</option>
+          </select>
+
+          <p class="hint">Preferred contact method *</p>
+          <div class="radio-row">
+            <label><input type="radio" name="contactMethod" value="email" required> Email</label>
+            <label><input type="radio" name="contactMethod" value="phone" required> Phone</label>
+          </div>
+
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required minlength="10" maxlength="800" rows="6"></textarea>
+
+          <label class="check">
+            <input type="checkbox" id="saveDraft">
+            Save draft automatically
+          </label>
+        </fieldset>
+
+        <button class="btn" type="submit">Send</button>
+
+        <div class="form-status" role="status" aria-live="polite" id="formStatus"></div>
+      </form>
+
+      <aside class="contact-info">
+        <h2>Business info</h2>
+        <ul>
+          <li><strong>Business:</strong> WM Servicios Hispanos</li>
+          <li><strong>Services:</strong> Immigration, Taxes, Insurance</li>
+          <li><strong>Hours:</strong> By appointment</li>
+        </ul>
+        <p class="note">This is a student project website for WDD 131.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WM Servicios Hispanos</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>

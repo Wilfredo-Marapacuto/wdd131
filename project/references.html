@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="References used for images and content.">
+  <title>WM Servicios Hispanos | References</title>
+
+  <link rel="icon" href="images/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles/base.css">
+  <style>
+    main { max-width: 900px; margin: 0 auto; padding: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand__logo" src="images/logo.webp" alt="WM Servicios Hispanos logo" width="56" height="56">
+      <div class="brand__text">
+        <p class="brand__name">WM Servicios Hispanos</p>
+        <p class="brand__tag">Immigration • Taxes • Insurance</p>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <ul id="navLinks" class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="is-active" href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>References</h1>
+    <p>This page lists the sources for any images or text referenced.</p>
+
+    <h2>Images</h2>
+    <ul>
+      <li>Hero images: created/edited for student project use.</li>
+      <li>Concept images (immigration/taxes/insurance): created/edited for student project use.</li>
+      <li>Logo: provided by the business owner (student).</li>
+    </ul>
+
+    <h2>Content</h2>
+    <ul>
+      <li>Service descriptions: original text written for this project.</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WM Servicios Hispanos</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".nav__toggle").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const links = document.getElementById("navLinks");
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        links.classList.toggle("nav__links--open");
+      });
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

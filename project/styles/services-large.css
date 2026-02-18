@@ -1,0 +1,4 @@
+@media (min-width: 900px){
+  .grid{ grid-template-columns: repeat(3, 1fr); }
+  .thumbs{ grid-template-columns: repeat(3, 1fr); }
+}

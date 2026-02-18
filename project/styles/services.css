@@ -1,0 +1,54 @@
+.page-head{
+  padding:1rem 0 .5rem;
+}
+.page-head p{ color:var(--muted); }
+
+.filters{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  align-items:end;
+  padding:1rem;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background: rgba(18,18,24,.6);
+}
+.check{ display:flex; align-items:center; gap:.5rem; color:var(--muted); }
+
+.grid{
+  margin-top:1rem;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1rem;
+}
+.service{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1rem;
+  background: rgba(18,18,24,.6);
+}
+.badge{
+  display:inline-block;
+  padding:.25rem .55rem;
+  border-radius:999px;
+  border:1px solid rgba(201,162,75,.5);
+  color:var(--muted);
+  font-size:.85rem;
+  margin-bottom:.5rem;
+}
+.service p{ color:var(--muted); }
+.service button{ margin-top:.75rem; }
+
+.thumbs{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1rem;
+}
+figure{
+  margin:0;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  background: rgba(18,18,24,.6);
+}
+figcaption{ padding:.75rem 1rem; color:var(--muted); }

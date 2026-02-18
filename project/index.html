@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="WM Servicios Hispanos — Immigration, Taxes & Insurance.">
+  <title>WM Servicios Hispanos | Home</title>
+
+  <link rel="icon" href="images/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/index-large.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand__logo" src="images/logo.webp" alt="WM Servicios Hispanos logo" width="56" height="56">
+      <div class="brand__text">
+        <p class="brand__name">WM Servicios Hispanos</p>
+        <p class="brand__tag">Immigration • Taxes • Insurance</p>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <ul id="navLinks" class="nav__links">
+        <li><a class="is-active" href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 900px)">
+        <img src="images/hero-small.webp" alt="WM Servicios Hispanos banner" width="1200" height="600">
+      </picture>
+
+      <div class="hero__content">
+        <h1>One place for Immigration, Taxes, and Insurance</h1>
+        <p>Clear guidance, organized paperwork, and professional service for the Hispanic community.</p>
+
+        <div class="hero__cta">
+          <a class="btn" href="services.html">View Services</a>
+          <a class="btn btn--outline" href="contact.html">Get in Touch</a>
+        </div>
+
+        <p class="hero__note" id="greeting"></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Popular Requests</h2>
+
+      <div class="cards" id="popularCards">
+        <!-- JS injects cards -->
+      </div>
+
+      <div class="controls">
+        <label for="category">Filter by category</label>
+        <select id="category" name="category">
+          <option value="all">All</option>
+          <option value="immigration">Immigration</option>
+          <option value="taxes">Taxes</option>
+          <option value="insurance">Insurance</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <h2>Quick Estimate</h2>
+      <p>Choose a service type and we’ll show an example message you can send.</p>
+
+      <div class="estimate">
+        <label for="serviceType">Service</label>
+        <select id="serviceType" name="serviceType">
+          <option value="immigration">Immigration</option>
+          <option value="taxes">Taxes</option>
+          <option value="insurance">Insurance</option>
+        </select>
+
+        <label for="clientName">Your name</label>
+        <input id="clientName" name="clientName" type="text" placeholder="e.g., Maria" maxlength="40">
+
+        <button class="btn" id="buildMessage" type="button">Build message</button>
+
+        <div class="output" role="status" aria-live="polite">
+          <p><strong>Message:</strong></p>
+          <pre id="messageOut"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WM Servicios Hispanos</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>
